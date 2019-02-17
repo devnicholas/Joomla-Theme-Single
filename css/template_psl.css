@@ -1,0 +1,371 @@
+/************ FONTES *************/
+@import url(animate.css);
+@import url(font-awesome.min.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 180px) and (max-width: 960px) {
+
+	body {
+		padding:0px;
+	}
+	
+	  .brand {
+		float:left;
+		width:100%;
+		text-align:center;
+	  }  
+	  
+	  .item-image {
+		text-align:center !important;
+		width:100% !important;
+		margin:0 0 10px 0 !important;
+	  }
+	  
+	  .blog .items-row  {
+		width:100% !important;
+		margin:0 0 10px 0 !important;
+	  }
+	  
+	  .blog .items-row  .item{
+		width:94% !important;
+		padding:3% !important;
+		float:left;    
+	  }
+	  
+	  .blog .items-row .page-header {
+		text-align:center !important;
+		width:100% !important;
+		margin:0 0 10px 0 !important;    
+	  }
+	  
+	  .blog .items-row .page-header h2{
+		text-align:center !important;
+	  }
+	  
+	  .blog .items-row .item p {
+		width:100% !important;
+		margin:0 0 10px 0 !important;
+		padding:0 !important;
+	  }
+	  
+	  .slider-wrapper,
+	  .nivoSlider {
+		min-height:10px !important;
+	  }
+	  
+		.slicknav_menu {
+			display:block !important;
+		}
+	
+}
+
+
+
+
+
+/************ MENU *************/
+
+.slicknav_menu {
+	display:none;
+}
+
+.navigation ul.principal {
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:100%;
+	float:left;
+}
+
+.navigation ul.principal li{
+	float:left;
+}
+
+.navigation ul.principal li a{
+	font-size:15px;
+	color:#000;
+	float:left;
+	padding:14px 14px;
+	text-transform:uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/************ GERAIS *************/
+
+body {
+	padding:0;
+	margin:0;
+	font-family:'Open Sans', Helvetica, Arial, sans-serif;
+	font-size:14px;
+	overflow-x:hidden;
+}
+
+a,
+button,
+input,
+li,
+textarea,
+select {
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+
+.container {
+	width:100%;
+	float:left;
+}
+
+.page-header {
+	margin:0 0 20px 0;
+	float:left;
+	padding:0;
+	width:100%;
+	float:left;
+	border:none;
+}
+
+.page-header h1,
+.page-header h2{
+	font-weight:normal;
+	float:left;
+	width:100%;
+	margin:0;
+	line-height:100%;
+}
+
+.blog,
+.item-page {
+	float:left;
+	width:100%;
+}
+
+
+
+
+
+
+
+
+
+/************ LISTAS *************/
+
+.lista {
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:100;
+	float:left;
+}
+
+.lista li:first-child{
+	margin-left:0;
+}
+
+.lista.cols-2 li{
+	float:left;
+	width:48%;
+	margin-left:4%;
+}
+
+.lista.cols-3 li{
+	float:left;
+	width:30%;
+	margin-left:4%;
+}
+
+.lista.cols-4 li{
+	float:left;
+	width:22%;
+	margin-left:3%;
+}
+
+.lista.cols-5 li{
+	float:left;
+	width:18%;
+	margin-left:2.5%;
+}
+
+.lista li .item-image{
+	float:left;
+	width:100%;
+	margin:0 0 10px 0;
+}
+
+.lista li .item-image img{
+	float:left;
+	width:100%;
+}
+
+.lista li h4{
+	padding:0;
+	width:100%;
+	float:left;
+	font-size:18px;
+	margin:0 0 10px 0;
+	line-height:100%;
+}
+
+.lista-noticias li h4 a{
+
+}
+
+.lista-noticias li p{
+	padding:0;
+	width:100%;
+	float:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************ BLOG *************/
+
+.blog .items-row{
+	float:left;
+	width:100%;
+	margin:0 0 20px 0;
+}
+
+.blog .items-row .item-image {
+	margin:0 0 10px 0;
+	width:100%;
+	float:left;
+}
+
+.blog .items-row .item-image img{
+	width:100%;
+}
+
+.blog .items-row .page-header{
+	margin:0 0 10px 0;
+	float:left;
+	width:100%;
+}
+
+.blog .items-row h2{
+	margin:0;
+	float:left;
+	width:100%;
+	font-family:'Open Sans';
+	font-size:20px;
+	line-height:100%;
+}
+
+
+
+
+
+
+
+
+
+/************ PAGINAÇÃO *************/
+
+.pagination {
+	float:left;
+	width:100%;
+	margin: 10px 0;
+}
+
+.pagination .counter {
+	float:left;
+	width:100%;
+	display:none;
+}
+
+.pagination .pagination-list {
+	float:left;
+	width:100%;
+	text-align:center;
+}
+
+.pagination .pagination-list a {
+	border:1px solid #EDEDED;
+	padding:5px 10px;
+	margin:0 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/************ ITEM PAGE *************/
+
+.articleBody {
+	float:left;
+	width:100%;
+}
+
+.articleBody .text {
+	float:left;
+	width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/************ PLG SOCIAIS *************/
+
+.sociais {
+	float:left;
+	width:100%;
+	margin:20px 0 0 0;
+}
+
+.sociais ul{
+	float:left;
+	width:100%;
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.sociais ul li{
+	float:left;
+	margin-right:10px;
+}

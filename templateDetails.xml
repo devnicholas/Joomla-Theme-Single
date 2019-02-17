@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>Single</name>
+	<version>1.2</version>
+	<creationDate>Julho de 2018</creationDate>
+	<author>Nicholas Stefano</author>
+	<authorEmail>nicholas.stefanob@gmail.com</authorEmail>
+  <authorUrl>http://www.cartolacomunicacao.com.br</authorUrl>
+	<copyright>Copyright (C) 2018 Open Source Matters, Inc. All rights reserved.</copyright>
+	<description><![CDATA[Tema sem formatação, ideal para criar template personalizado. Utilizado pela <a href="http://www.cartolacomunicacao.com.br" target="_blank">Cartola Comunicação</a>.]]></description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+    <filename>popup.php</filename>
+    <filename>readme.txt</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+	</files>
+	<languages>
+      <language tag="en-GB">language/en-GB/en-GB.tpl_single.ini</language>
+    	<language tag="en-GB">language/en-GB/en-GB.tpl_single.sys.ini</language>
+      <language tag="pt-br">language/pt-br/pt-BR.tpl_single</language>
+    	<language tag="pt-br">language/pt-br/pt-BR.tpl_single.sys.ini</language>
+	</languages>
+	<positions>
+		<position>banner</position>
+		<position>nav</position>
+		<position>busca</position>
+		<position>breadcrumbs</position>
+		<position>debug</position>
+		<position>footer</position>
+	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="templateColor" class="" type="color" default="#000"
+					label="Cor Principal"
+					description="Será utilizada na página de erros como cor de fundo." />
+
+				<field name="templateBackgroundColor" class="" type="color" default="#ffff66"
+					label="Cor Secundária"
+					description="Será utilizada na página de erros como cor do texto." />
+
+				<field name="logoFile" class="" type="media" default=""
+					label="Logomarca"
+					description="Logomarca" />
+					
+				<field name="sitetitle"  type="text" default=""
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					filter="string" />
+
+				<field name="sitedescription"  type="text" default=""
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					filter="string" />
+
+				<field name="googleFont"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Usar Google Fontes?"
+					description="Usar Google Fontes?"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="googleFontName" class="" type="text" default="Open+Sans"
+					label="Nome da fonte"
+					description="Nome da fonte"
+          showon="googleFont:1" />
+        
+        <field name="bootstrap"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Usar Bootstrap?"
+					description="Usar Bootstrap?"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+        <field 
+						type="spacer" 
+						name="spacer99"
+						label="Documentação disponível em: https://getbootstrap.com/docs/4.1/getting-started/introduction/" 
+						showon="bootstrap:1"
+					/>
+        
+         <field name="slicknav"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Usar SlickNav?"
+					description="Usar SlickNav?"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+        <field 
+						type="spacer" 
+						name="spacer101"
+						label="Documentação disponível em: http://slicknav.io/" 
+						showon="slicknav:1"
+					/>
+
+        <field name="fancybox"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Usar Fancybox?"
+					description="Usar Fancybox?"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+        <field 
+						type="spacer" 
+						name="spacer100"
+						label="Documentação disponível em: https://fancyapps.com/fancybox/3/docs/" 
+						showon="fancybox:1"
+					/>
+          
+        <field name="popup"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Popup Promocional?"
+					description="Popup Promocional?"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+        <field 
+						type="spacer" 
+						name="spacer102"
+						label="Atenção: Requer a ativação do FancyBox." 
+						showon="fancybox:0"
+					/>
+        
+        <field name="popupImage" 
+          class="" 
+          type="media" 
+          default=""
+					label="Imagem do Popup"
+					description="Imagem do Popup"
+          showon="popup:1" />
+        
+        <field name="linkPopup" 
+          class="" 
+          type="text" 
+          default=""
+					label="URL do clique no popup"
+					description="URL do clique no popup"
+          showon="popup:1" />
+          
+        <field name="target"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Target do clique"
+					description="Target do clique"
+          showon="popup:1"
+				>
+					<option value="0">Mesma página</option>
+					<option value="1">Nova página</option>
+				</field>
+          
+				<field name="fluidContainer"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="Site fluído?"
+					description="Site fluído?"
+				>
+					<option value="0">Estático</option>
+					<option value="1">Fluído</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

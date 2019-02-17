@@ -1,0 +1,64 @@
+body {
+  border-top:none !important;
+}
+
+.header {
+  text-align:center;
+  padding:30px 0;
+}
+
+.brand {
+  width:100%;
+  text-align:center;
+}
+
+.well {
+  background:none !important;
+  border:none !important;
+  margin:40px auto 0 auto !important;
+  padding:0 !important;
+  max-width:960px;
+}
+
+.page-header {
+  border:none;
+  margin:0;
+  padding:0;
+  font-size:50px;
+  line-height:50px;
+  text-align:right;
+}
+
+smile {
+    font-size: 150px;
+    line-height: 150px;
+    float: left;
+    text-align: center;
+    border-radius: 200px;
+    padding: 15px 50px 30px 50px;
+    margin-left: 35px;
+}
+
+.well blockquote {
+  margin:80px 0 0 0;
+  padding:0;
+  border:none; 
+  text-align:center;
+  font-size:25px; 
+}
+
+.label-inverse, 
+.badge-inverse {
+  padding:10px;
+  font-size:20px;
+}
+hr{
+  border: none;
+  width: 40%
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
