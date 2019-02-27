@@ -18,7 +18,7 @@
 		<filename>template_preview.png</filename>
 		<filename>template_thumbnail.png</filename>
     <filename>popup.php</filename>
-    <filename>readme.txt</filename>
+    <filename>readme.md</filename>
 		<folder>css</folder>
 		<folder>html</folder>
 		<folder>images</folder>
