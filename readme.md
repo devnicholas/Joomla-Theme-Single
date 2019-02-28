@@ -31,10 +31,9 @@ $mainframe = JFactory::getApplication('site');
 $mainframe->initialise();
 $user = JFactory::getUser();
 $session = JFactory::getSession();
-$db = JFactory::getDBO();
 require_once ( 'custom.php' );
-$customClass = new CustomFields();
-$user_filds = json_decode($customClass->getFields($user->id));
-
+$customClass = new Custom();
+$db = new DB();
+$user_fields = json_decode($customClass->getFields($user->id));
 ?> 
 ```
