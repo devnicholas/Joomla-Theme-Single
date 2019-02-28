@@ -29,7 +29,7 @@ if(!defined('OVERRIDE_DIRECTORY')){
 	define('OVERRIDE_DIRECTORY', realpath(dirname(__FILE__)) . '/../../');
 }
 require_once ( OVERRIDE_DIRECTORY.'custom/custom.php' );
-$customClass = new CustomFields();
+$customClass = new Custom();
 
 // Verificando a existência de alertas a serem disparados 
     if(isset($_SESSION["error"]) && isset($_SESSION["msg_to_display"])):
