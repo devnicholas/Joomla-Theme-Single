@@ -52,22 +52,22 @@ $db->select ( string $values, string $table [, mixed $where , mixed $order , mix
 ```
 Essa função retorna um array associativo com os resultados da busca.
 #### Parâmetros
-*values*
+- *values*
   Os valores a serem retornados no select. Use null para retornar todos.
   
-*table*
+- *table*
   A tabela onde será feito o select.
   
-*where*
+- *where*
   Condição para pesquisa. [Opcional]
   
-*order*
+- *order*
   A ordem de retorno dos dados. [Opcional]
   
-*limit*
+- *limit*
   Limitar o número de dados retornardos. [Opcional]
   
-*group*
+- *group*
   Agrupar os dados a serem retornados. [Opcional]
   
 ### Insert
@@ -76,10 +76,10 @@ $db->insert( string $table , array $values ) : void
 ```
 Essa função insere os dados informados na tabela
 #### Parâmetros
-*table*
+- *table*
   Tabela no qual os valores serão inseridos
   
-*values*
+- *values*
   Array contendo os valores a serem inseridose as chaves sendo as colunas a serem inseridos os valores, seguindo essa sintaxe:
   ``` array('id' => null, 'name' => $db->q("Nicholas Stefano")) ```
   
@@ -89,14 +89,14 @@ $db->update( string $table , array $values, mixed $where) : void
 ```
 Essa função atualiza os dados de uma tabela
 #### Parâmetros
-*table*
+- *table*
   Tabela no qual os valores serão atualizados
   
-*values*
+- *values*
   Array de valores que deverão ser atualizados. Onde a key é a coluna e o value o novo valor a ser inserido. 
   Ex.: ``` array('idade' => 20, 'name' => $db->q("Nicholas S.")) ```
   
-*where*
+- *where*
   Condição para as linhas que serão atualizadas
   
 ### Delete
@@ -105,8 +105,8 @@ $db->delete(string $table, mixed $where): void
 ```
 Essa função exclui os dados de uma tabela
 #### Parâmetros
-*table*
+- *table*
   Tabela no qual os valores serão excluídos
   
-*where*
+- *where*
   Condição para as linhas que serão excluídas
