@@ -1,5 +1,5 @@
 <?php
-class Custom {
+class Fields {
 	
 	public function getFields($id = null)
 	{
@@ -158,7 +158,7 @@ class DB {
 			$values = "*";
 		}
 		$db = JFactory::getDBO();
-		$sql = "SELECT * FROM ".$table."";
+		$sql = "SELECT ".$values." FROM ".$table."";
 		if($where!=null){
 			$sql.=" WHERE ".$where;
 		}
@@ -180,10 +180,17 @@ class DB {
 			return;
 		}
 		$db = JFactory::getDBO();
-		$_values = "'";
-		$_values .= implode($db->q(","),$values);
-		$_values .= "'";
-		$sql = " INSERT INTO ".$table." VALUES (".$_values.") ";
+		$columns = array();
+		$_values = array();
+		foreach ($values as $key => $value) {
+			if (!in_array($key, $columns)) {
+				$columns[] = $key;
+			}
+			$_values[] = $value;
+		}
+		$_columns = implode(",", $columns);
+		$__values = implode(",", $_values);
+		$sql = " INSERT INTO ".$table." (".$_columns.") VALUES (".$__values.") ";
 		$db->setQuery($sql);
 		$db->query();
 	}
