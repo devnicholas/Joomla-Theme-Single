@@ -12,6 +12,8 @@ defined('_JEXEC') or die;
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 // Create shortcuts to some parameters.
+$mainframe = JFactory::getApplication('site');
+$mainframe->initialise();
 $params  = $this->item->params;
 $images  = json_decode($this->item->images);
 $urls    = json_decode($this->item->urls);
@@ -25,7 +27,10 @@ $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associat
 JHtml::_('behavior.caption');
 
 // Criando instancia da classe 'custom'
-require_once ( JPATH_BASE."\\templates\\".$mainframe->getTemplate()."\\html\\custom\\custom.php" );
+if(!defined('OVERRIDE_DIRECTORY')){
+	define('OVERRIDE_DIRECTORY', JPATH_BASE."\\templates\\".$mainframe->getTemplate()."\\html\\custom\\" );
+}
+require_once ( OVERRIDE_DIRECTORY."custom.php" );
 $customClass = new Fields();
 
 // Verificando a existência de alertas a serem disparados 
@@ -189,7 +194,7 @@ $customClass = new Fields();
   
   <?php
     // Verificando chamado de páginas customizadas
-    $file =OVERRIDE_DIRECTORY.'custom/'.trim($pageclass).'.block.php'; 
+    $file =OVERRIDE_DIRECTORY.trim($pageclass).'.block.php'; 
     if(is_file($file)) :   
       require_once($file);    
     endif;
