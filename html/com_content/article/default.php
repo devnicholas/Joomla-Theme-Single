@@ -25,11 +25,8 @@ $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associat
 JHtml::_('behavior.caption');
 
 // Criando instancia da classe 'custom'
-if(!defined('OVERRIDE_DIRECTORY')){
-	define('OVERRIDE_DIRECTORY', realpath(dirname(__FILE__)) . '/../../');
-}
-require_once ( OVERRIDE_DIRECTORY.'custom/custom.php' );
-$customClass = new Custom();
+require_once ( JPATH_BASE."\\templates\\".$mainframe->getTemplate()."\\html\\custom\\custom.php" );
+$customClass = new Fields();
 
 // Verificando a existência de alertas a serem disparados 
     if(isset($_SESSION["error"]) && isset($_SESSION["msg_to_display"])):
