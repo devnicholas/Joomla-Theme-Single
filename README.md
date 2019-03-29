@@ -32,7 +32,7 @@ $mainframe->initialise();
 $user = JFactory::getUser();
 $session = JFactory::getSession();
 $db = JFactory::getDBO();
-require_once ( 'custom.php' );
+require_once ( JPATH_BASE."\\templates\\".$mainframe->getTemplate()."\\html\\custom\\custom.php" );
 $customClass = new CustomFields();
 $user_filds = json_decode($customClass->getFields($user->id));
 
