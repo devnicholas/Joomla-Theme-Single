@@ -1,7 +1,7 @@
 # Tema Joomla! - Single
 
 Tema limpo com funções básicas para o Joomla!
-*Testado a partir do Joomla! > 3.0
+*Testado a partir do Joomla! > 3.0 com php 5.4
 ## Instruções básicas:
 
 #### Separando arquivos por página
